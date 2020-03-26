@@ -24,7 +24,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Calculates the inverse matrix of the list created by makeCacheMatrix, but first checks whether the inverse
 ## matrix was already calculated. If IM already exists, prints a message and the IM. Otherwise, it gets the 
-## matrix x, calculates the inverse, sets it, then returns it. 
+## matrix x, calculates the inverse, sets it, then returns it. If the matrix supplied into makeCacheMatrix 
+## is not invertible, R will throw an error. 
 
 cacheSolve <- function(x, ...) {
         IM = x$getIM()
