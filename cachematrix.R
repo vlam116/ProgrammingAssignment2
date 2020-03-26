@@ -1,7 +1,9 @@
 ## cachematrix.R allows the user to calculate the inverse matrix of a given matrix x, under the assumption
 ## that x is invertible. The user may also set/get the values of x and its inverse matrix through the extract
 ## operator $. Subsequently, the new inverse matrix generated in this way can be quickly recalculated and
-## retrieved. 
+## retrieved. The first function, makeCacheMatrix, creates an object in R that stores a matrix and the inverse
+## of that matrix. cacheSolve requires an argument returned by makeCacheMatrix to retrieve the inverse matrix
+## stored inside makeCacheMatrix's environment. 
 
 
 ## Creates a list containing the "getter/setter" functions. The "set" and "get" functions set/get the 
